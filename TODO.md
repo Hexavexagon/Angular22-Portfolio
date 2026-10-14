@@ -1,0 +1,11 @@
+- [ ] Footer including technologies used to create site, and credit. Include Node.js, Angular 22, NVM, LESS, Angular-CLI, 
+- [ ] Tabs with clean navigation on left/right cursor.
+- [x] Introduction tab (include residency status and career goal)
+- [x] Education tab
+- [x] Work history tab
+- [x] Personal Achievements tab (include key skills and competencies)
+- [x] Referees tab
+- [x] Portfolio tab
+- [x] Interests tab
+- [x] Contact tab
+- [ ] Link and QR code?
