@@ -1,5 +1,5 @@
-<p>education-tab works!</p>
+<h1>{{ dataService.education.heading }}</h1>
 
-@for (paragraph of dataService.education; track $index) {
+@for (paragraph of dataService.education.paragraphs; track $index) {
   <p>{{ paragraph }}</p>
 }

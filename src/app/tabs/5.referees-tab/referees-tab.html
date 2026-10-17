@@ -1,5 +1,5 @@
-<p>referees-tab works!</p>
+<h1>{{ dataService.referees.heading }}</h1>
 
-@for (paragraph of dataService.referees; track $index) {
+@for (paragraph of dataService.referees.paragraphs; track $index) {
   <p>{{ paragraph }}</p>
 }

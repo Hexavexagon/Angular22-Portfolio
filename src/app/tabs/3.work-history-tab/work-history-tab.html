@@ -1,5 +1,5 @@
-<p>work-history-tab works!</p>
+<h1>{{ dataService.workHistory.heading }}</h1>
 
-@for (paragraph of dataService.workHistory; track $index) {
+@for (paragraph of dataService.workHistory.paragraphs; track $index) {
   <p>{{ paragraph }}</p>
 }

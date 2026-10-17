@@ -1,67 +1,23 @@
-# Angular22Portfolio
+# Angular 22 Portfolio
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.2.
 
+---
 
+## Development
 
+To run the app, run `npm start` from the root directory, and open `http://localhost:4200/`. This watches, rebuilds, and refreshes the page automatically. If you don't see your changes, check the terminal for errors.
 
-## Development server
+---
 
-To start a local development server, run:
+## Usage
 
-```bash
-ng serve
-```
+To make this portfolio yours, open the `src/app/services/data` directory, and edit the headings and paragraphs in the data files. Be careful with your use of apostrophes or speech marks. You need to use the opposite kind in order to contain them in a string.
 
-Their own docs say to use `npm start`, so I don't know why the CLI-created readme says to use serve.
+e.g.
+`'This is a can of soup "for my family".'`
+or
+`"Don't tell the US government."`.
 
-
-
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+To remove a tab from the tab group, open `src/app/services/data/whitelist-data.ts`, and set that tab's value to false.
+To change the footer text, open `src/app/footer/footer.html`.

@@ -1,5 +1,5 @@
-<h1>Welcome</h1>
+<h1>{{ dataService.introduction.heading }}</h1>
 
-@for (paragraph of dataService.introduction; track $index) {
+@for (paragraph of dataService.introduction.paragraphs; track $index) {
   <p>{{ paragraph }}</p>
 }

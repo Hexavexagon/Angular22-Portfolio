@@ -1,5 +1,5 @@
-<p>achievements-tab works!</p>
+<h1>{{ dataService.achievements.heading }}</h1>
 
-@for (paragraph of dataService.achievements; track $index) {
+@for (paragraph of dataService.achievements.paragraphs; track $index) {
   <p>{{ paragraph }}</p>
 }

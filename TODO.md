@@ -1,5 +1,5 @@
-- [ ] Footer including technologies used to create site, and credit. Include Node.js, Angular 22, NVM, LESS, Angular-CLI, 
-- [ ] Tabs with clean navigation on left/right cursor.
+- [x] Footer including technologies used to create site, and credit. Include Node.js, Angular 22, NVM, LESS, Angular-CLI, 
+- [x] Tabs with clean navigation on left/right arrow keyup.
 - [x] Introduction tab (include residency status and career goal)
 - [x] Education tab
 - [x] Work history tab
@@ -8,4 +8,7 @@
 - [x] Portfolio tab
 - [x] Interests tab
 - [x] Contact tab
+- [ ] Fill out my details
+- [ ] Use appropriate AM components wherever details aren't displayed well enough
+- [ ] Add better fonts to the theme?
 - [ ] Link and QR code?

@@ -1,5 +1,5 @@
-<p>interests-tab works!</p>
+<h1>{{ dataService.interests.heading }}</h1>
 
-@for (paragraph of dataService.interests; track $index) {
+@for (paragraph of dataService.interests.paragraphs; track $index) {
   <p>{{ paragraph }}</p>
 }

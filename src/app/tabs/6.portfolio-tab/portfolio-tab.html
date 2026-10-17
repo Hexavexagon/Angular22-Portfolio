@@ -1,5 +1,5 @@
-<p>portfolio-tab works!</p>
+<h1>{{ dataService.portfolio.heading }}</h1>
 
-@for (paragraph of dataService.portfolio; track $index) {
+@for (paragraph of dataService.portfolio.paragraphs; track $index) {
   <p>{{ paragraph }}</p>
 }
