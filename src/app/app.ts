@@ -1,4 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 // Components
 import { MatTab, MatTabGroup } from '@angular/material/tabs';
@@ -18,6 +19,7 @@ import { DataService } from './services/data-service';
 
 @Component({
   imports: [
+    RouterOutlet,
     MatTabGroup,
     MatTab,
     IntroductionTab,
