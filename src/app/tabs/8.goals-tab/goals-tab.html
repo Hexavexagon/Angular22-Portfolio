@@ -1,0 +1,5 @@
+<h1>{{ dataService.goals.heading }}</h1>
+
+@for (paragraph of dataService.goals.paragraphs; track $index) {
+  <p>{{ paragraph }}</p>
+}
