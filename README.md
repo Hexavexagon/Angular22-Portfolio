@@ -22,3 +22,17 @@ or
 To remove a tab from the tab group, open `src/app/services/data/whitelist-data.ts`, and set that tab's value to false.
 
 To change the footer text, open `src/app/footer/footer.html`.
+
+---
+
+## Deploying to Github Pages
+
+1. Ensure you have pushed a commit to your repository. This makes Github recognize that the repo has a branch.
+2. Go to your repository and click the `Settings` tab next to `Insights`.
+3. Nav to `Pages` in the `Code, planning, and automation` section.
+4. Under the `Branch` heading, set the branch to `main` and folder to `/(root)`, then click save.
+5. Go into `package.json` and edit the `github-build` command so that it uses your username and repository name.
+6. While you're there, edit the `github-deploy` command so that it uses your root folder name (this will be what the folder in dist is called).
+7. Run `npm run github-build` and `npm run github-deploy`.
+8. Go back to the repository settings page and change the branch from `main` to `gh-pages`, then click save.
+9. Go to the URL you used in the `github-build` command, and check if the page is live. If it just shows the README file, it is still processing so give it more time.
