@@ -1,6 +1,7 @@
-export type InterestsData = { heading: string, paragraphs: string[] };
+export type InterestsData = { heading: string, description: string | null, paragraphs: string[] };
 
 const heading = 'Interests';
+const description = null;
 const paragraphs = [
   'Dancing',
   'TTRPG design',
@@ -9,4 +10,4 @@ const paragraphs = [
   'Poetry',
 ];
 
-export const interestsData: InterestsData = { heading, paragraphs };
+export const interestsData: InterestsData = { heading, description, paragraphs };

@@ -15,7 +15,7 @@ export const whitelistData: WhitelistData = {
   education: true,
   workHistory: true,
   achievements: true,
-  referees: true,
+  referees: false,
   portfolio: true,
   interests: true,
   goals: true,

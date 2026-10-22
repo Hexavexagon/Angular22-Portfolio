@@ -1,5 +1,13 @@
 <h1>{{ dataService.education.heading }}</h1>
+<p>{{ dataService.education.description }}</p>
 
-@for (paragraph of dataService.education.paragraphs; track $index) {
-  <p>{{ paragraph }}</p>
-}
+<mat-list>
+  @for (listItem of dataService.education.list; track $index) {
+    <mat-list-item>
+      <h3 matListItemTitle>{{ listItem.title }}</h3>
+      @for (line of listItem.lines; track $index) {
+        <span matListItemLine>{{ line }}</span>
+      }
+    </mat-list-item>
+  }
+</mat-list>

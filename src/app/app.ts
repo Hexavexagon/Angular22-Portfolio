@@ -51,6 +51,7 @@ export class App {
   // Originally I wrote these as smarter functions, but they were much less human readible.
   private onRight(): void {
     if (this.tabIndex === this.maxTabindex) {
+      // Wrap around to start
       this.tabIndex = 0;
     } else {
       this.tabIndex++;
@@ -58,6 +59,7 @@ export class App {
   }
   private onLeft(): void {
     if (this.tabIndex === this.minTabindex) {
+      // Wrap around to end
       this.tabIndex = this.maxTabindex;
     } else {
       this.tabIndex--;

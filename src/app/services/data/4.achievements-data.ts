@@ -1,9 +1,42 @@
-export type AchievementsData = { heading: string, paragraphs: string[] };
+import { Card } from "./angular-types";
+
+export type AchievementsData = { heading: string, description: string | null, cards: Card[] };
 
 const heading = 'Achievements';
-const paragraphs = [
-  'Here is some stuff I am proud of',
-  'Key skills and competencies displayed:',
+const description = null;
+const cards = [
+  {
+    title: '',
+    subtitle: '',
+    imageSrc: '',
+    paragraphs: [
+      '',
+    ],
+  },
+  {
+    title: '',
+    subtitle: '',
+    imageSrc: '',
+    paragraphs: [
+      '',
+    ],
+  },
+  {
+    title: '',
+    subtitle: '',
+    imageSrc: '',
+    paragraphs: [
+      '',
+    ],
+  },
+  {
+    title: '',
+    subtitle: '',
+    imageSrc: '',
+    paragraphs: [
+      '',
+    ],
+  },
 ];
 
-export const achievementsData: AchievementsData = { heading, paragraphs };
+export const achievementsData: AchievementsData = { heading, description, cards };

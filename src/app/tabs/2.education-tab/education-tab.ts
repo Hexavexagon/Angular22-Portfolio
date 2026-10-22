@@ -1,8 +1,12 @@
 import { Component, inject } from '@angular/core';
+import { MatListModule } from '@angular/material/list';
+
 import { DataService } from '../../services/data-service';
 
 @Component({
-  imports: [],
+  imports: [
+    MatListModule,
+  ],
   selector: 'app-education-tab',
   styleUrl: './education-tab.less',
   templateUrl: './education-tab.html',
