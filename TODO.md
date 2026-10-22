@@ -10,5 +10,7 @@
 - [x] Contact tab
 - [ ] Fill out my details
 - [ ] Use appropriate AM components wherever details aren't displayed well enough
+- [ ] Linkify the paragraphs?
+- [ ] Add instructions in the README for adding pictures
 - [ ] Add better fonts to the theme?
 - [ ] Link and QR code?
