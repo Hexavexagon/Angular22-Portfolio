@@ -1,10 +1,9 @@
-import { List } from "./angular-types";
+import { ListData } from "../../types/tab-types";
 
-export type EducationData = { heading: string, description: string | null, list: List[] };
-
+const type = 'list';
 const heading = 'History of Education';
 const description = 'I have a Bachelor of Engineering with Honours, with Second Class Honours in Software Engineering from Victoria University of Wellington.';
-const list = [
+const lists = [
   {
     title: '2014',
     lines: [
@@ -61,4 +60,4 @@ const list = [
   },
 ];
 
-export const educationData: EducationData = { heading, description, list };
+export const educationData: ListData = { type, heading, description, lists };

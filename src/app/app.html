@@ -1,66 +1,16 @@
-<mat-tab-group
-  [(selectedIndex)]="tabIndex"
->
-  @if (dataService.whitelist.introduction) {
-    <mat-tab label="Introduction">
+<mat-tab-group [(selectedIndex)]="tabIndex">
+  @for (tab of dataService.tabs; track $index) {
+    <mat-tab [label]="tab.heading">
       <div class="tab-content">
-        <app-introduction-tab class="tab"></app-introduction-tab>
-      </div>
-    </mat-tab>
-  }
-  @if (dataService.whitelist.education) {
-    <mat-tab label="Education">
-      <div class="tab-content">
-        <app-education-tab></app-education-tab>
-      </div>
-    </mat-tab>
-  }
-  @if (dataService.whitelist.workHistory) {
-    <mat-tab label="Work History">
-      <div class="tab-content">
-        <app-work-history-tab></app-work-history-tab>
-      </div>
-    </mat-tab>
-  }
-  @if (dataService.whitelist.achievements) {
-    <mat-tab label="Achievements">
-      <div class="tab-content">
-        <app-achievements-tab></app-achievements-tab>
-      </div>
-    </mat-tab>
-  }
-  @if (dataService.whitelist.referees) {
-    <mat-tab label="Referees">
-      <div class="tab-content">
-        <app-referees-tab></app-referees-tab>
-      </div>
-    </mat-tab>
-  }
-  @if (dataService.whitelist.portfolio) {
-    <mat-tab label="Portfolio">
-      <div class="tab-content">
-        <app-portfolio-tab></app-portfolio-tab>
-      </div>
-    </mat-tab>
-  }
-  @if (dataService.whitelist.interests) {
-    <mat-tab label="Interests">
-      <div class="tab-content">
-        <app-interests-tab></app-interests-tab>
-      </div>
-    </mat-tab>
-  }
-  @if (dataService.whitelist.goals) {
-    <mat-tab label="Goals">
-      <div class="tab-content">
-        <app-goals-tab></app-goals-tab>
-      </div>
-    </mat-tab>
-  }
-  @if (dataService.whitelist.contact) {
-    <mat-tab label="Contact">
-      <div class="tab-content">
-        <app-contact-tab></app-contact-tab>
+        @if (tab.type === 'card') {
+          <app-card-tab class="tab" [tab]="tab"></app-card-tab>
+        }
+        @if (tab.type === 'paragraph') {
+          <app-paragraph-tab class="tab" [tab]="tab"></app-paragraph-tab>
+        }
+        @if (tab.type === 'list') {
+          <app-list-tab class="tab" [tab]="tab"></app-list-tab>
+        }
       </div>
     </mat-tab>
   }

@@ -1,5 +1,6 @@
-export type GoalsData = { heading: string, description: string | null, paragraphs: string[] };
+import { ParagraphData } from "../../types/tab-types";
 
+const type = 'paragraph';
 const heading = 'Goals';
 const description = 'In terms of employment, I have a few things I am on the lookout for:';
 const paragraphs = [
@@ -8,4 +9,4 @@ const paragraphs = [
   'I work in a Linux dev environment without the use of Ai and I am not inclined to change that.',
 ];
 
-export const goalsData: GoalsData = { heading, description, paragraphs };
+export const goalsData: ParagraphData = { type, heading, description, paragraphs };

@@ -1,7 +1,6 @@
-import { Card } from "./angular-types";
+import { CardData } from "../../types/tab-types";
 
-export type PortfolioData = { heading: string, description: string | null, cards: Card[] };
-
+const type = 'card';
 const heading = 'Portfolio';
 const description = 'Here are some projects I have worked on over the years.';
 const cards = [
@@ -62,4 +61,4 @@ const cards = [
   },
 ];
 
-export const portfolioData: PortfolioData = { heading, description, cards };
+export const portfolioData: CardData = { type, heading, description, cards };

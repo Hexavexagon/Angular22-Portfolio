@@ -1,18 +1,13 @@
+// Angular
 import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 // Components
-import { MatTab, MatTabGroup } from '@angular/material/tabs';
-import { IntroductionTab } from './tabs/1.introduction-tab/introduction-tab';
-import { AchievementsTab } from './tabs/4.achievements-tab/achievements-tab';
-import { EducationTab } from './tabs/2.education-tab/education-tab';
-import { WorkHistoryTab } from './tabs/3.work-history-tab/work-history-tab';
-import { RefereesTab } from './tabs/5.referees-tab/referees-tab';
-import { PortfolioTab } from './tabs/6.portfolio-tab/portfolio-tab';
-import { InterestsTab } from './tabs/7.interests-tab/interests-tab';
-import { GoalsTab } from './tabs/8.goals-tab/goals-tab';
-import { ContactTab } from './tabs/9.contact-tab/contact-tab';
-import { Footer } from './footer/footer';
+import { MatTabsModule } from '@angular/material/tabs';
+import { ParagraphTab } from './components/tabs/paragraph-tab/paragraph-tab';
+import { CardTab } from './components/tabs/card-tab/card-tab';
+import { ListTab } from './components/tabs/list-tab/list-tab';
+import { Footer } from './components/footer/footer';
 
 // Services
 import { DataService } from './services/data-service';
@@ -20,17 +15,10 @@ import { DataService } from './services/data-service';
 @Component({
   imports: [
     RouterOutlet,
-    MatTabGroup,
-    MatTab,
-    IntroductionTab,
-    EducationTab,
-    WorkHistoryTab,
-    AchievementsTab,
-    RefereesTab,
-    PortfolioTab,
-    InterestsTab,
-    GoalsTab,
-    ContactTab,
+    MatTabsModule,
+    ParagraphTab,
+    CardTab,
+    ListTab,
     Footer,
   ],
   selector: 'app-root',
@@ -46,7 +34,7 @@ export class App {
   public dataService = inject(DataService);
   public tabIndex = 0;
   private minTabindex = 0;
-  private maxTabindex = this.dataService.whitelistLength;
+  private maxTabindex = this.dataService.tabs.length - 1;
 
   // Originally I wrote these as smarter functions, but they were much less human readible.
   private onRight(): void {

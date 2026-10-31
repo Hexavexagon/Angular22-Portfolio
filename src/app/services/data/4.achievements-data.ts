@@ -1,7 +1,6 @@
-import { Card } from "./angular-types";
+import { CardData } from "../../types/tab-types";
 
-export type AchievementsData = { heading: string, description: string | null, cards: Card[] };
-
+const type = 'card';
 const heading = 'Achievements';
 const description = null;
 const cards = [
@@ -39,4 +38,4 @@ const cards = [
   },
 ];
 
-export const achievementsData: AchievementsData = { heading, description, cards };
+export const achievementsData: CardData = { type, heading, description, cards };

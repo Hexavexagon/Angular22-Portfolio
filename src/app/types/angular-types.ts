@@ -6,6 +6,7 @@ export type List = {
 export type Card = {
   title: string,
   subtitle: string,
-  imageSrc: string,
+  avatar?: string,
+  imageSrc?: string,
   paragraphs: string[],
 };

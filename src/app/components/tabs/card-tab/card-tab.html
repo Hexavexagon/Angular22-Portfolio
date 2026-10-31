@@ -1,14 +1,15 @@
-<h1>{{ dataService.portfolio.heading }}</h1>
+<h1>{{ tab.heading }}</h1>
 
-@for (card of dataService.portfolio.cards; track $index) {
+@for (card of tab.cards; track $index) {
   <mat-card class="app-card">
     <mat-card-header>
-      <div mat-card-avatar>
-        <img mat-card-image [src]="card.imageSrc" role="presentation" alt="">
-      </div>
+      <img mat-card-avatar [src]="card.avatar" role="presentation" alt=""/>
       <mat-card-title>{{ card.title }}</mat-card-title>
       <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
     </mat-card-header>
+    @if (card.imageSrc) {
+      <img mat-card-image [src]="card.imageSrc" role="presentation" alt=""/>
+    }
     <mat-card-content>
       @for (paragraph of card.paragraphs; track $index) {
         <p>{{ paragraph }}</p>
