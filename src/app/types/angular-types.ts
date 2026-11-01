@@ -1,6 +1,11 @@
+type ListItem = {
+  itemTitle: string,
+  lines?: string[],
+}
+
 export type List = {
-  title: string,
-  lines: string[],
+  heading: string,
+  listItems: ListItem[],
 };
 
 export type Card = {

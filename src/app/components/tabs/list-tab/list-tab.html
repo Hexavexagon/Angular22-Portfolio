@@ -1,13 +1,21 @@
-<h1>{{ tab.heading }}</h1>
+<h1> {{ tab.heading }}</h1>
 <p>{{ tab.description }}</p>
 
-<mat-list>
-  @for (listItem of tab.lists; track $index) {
-    <mat-list-item>
-      <h3 matListItemTitle>{{ listItem.title }}</h3>
-      @for (line of listItem.lines; track $index) {
-        <span matListItemLine>{{ line }}</span>
-      }
-    </mat-list-item>
+@for (list of tab.lists; track $index) {
+  <mat-list class="list">
+    <h2>{{ list.heading }}</h2>
+    @for (listItem of list.listItems; track $index) {
+      <div class="listItem">
+        @if (listItem.itemTitle) {
+          <div matListItemTitle>{{ listItem.itemTitle }}</div>
+        }
+        @for (line of listItem.lines; track $index) {
+          <div matListItemLine class="listItemLine">{{ line }}</div>
+        }
+      </div>
+    }
+  </mat-list>
+  @if (tab.lists.length > 1 && $index < tab.lists.length - 1) {
+    <mat-divider></mat-divider>
   }
-</mat-list>
+}

@@ -12,20 +12,33 @@ To run the app, run `npm start` from the root directory, and open `http://localh
 
 ## Usage
 
-To make this portfolio yours, open the `src/app/services/data` directory, and edit the headings and paragraphs in the data files. Be careful with your use of apostrophes or speech marks. You need to use the opposite kind in order to contain them in a string.
+To make this portfolio yours, you have two options. Use the existing structure for an easier experience, or create your own structure for more customization.
+
+### Using the Existing Structure
+Open the `src/app/services/data` directory, and edit the headings, descriptions, lists, cards, and paragraphs in the data files. Be careful with your use of apostrophes or speech marks. You need to use the opposite kind in order to contain them in a string.
 
 e.g.
 `'This is a can of soup "for my family".'`  
 or
 `"Don't tell the US government."`.
 
-To remove a tab from the tab group, open `src/app/services/data/whitelist-data.ts`, and set that tab's value to false.
+To remove a tab from the tab group, open `src/app/services/data-service.ts`, and remove it from the `this._tabs` variable.
 
+### Creating Your Own Structure
+Delete the files in `src/app/services/data`, and put whatever new tabs you want in there. Copy the templates from `src/app/services/templates` into those files and fill them out. In your new files, rename the exported const on the last line to something appropriate (ie `export const myExampleTabData`).
+
+Open `src/app/services/data-service.ts` and add your tab to `this._tabs` in the constructor. Don't forget to also import it at the top of the file (ie `import { myExampleTabData } from './data/my-example-tab-data';`). You can remove all the unwanted tabs now.
+
+### Adding an Image
+To add an image, place it in the `/public` folder. From here it can be used just by its filename. Check the `src/app/services/data` folder for examples of this.
+
+### Changing the Footer
 To change the footer text, open `src/app/footer/footer.html`.
 
 ---
 
 ## Deploying to Github Pages
+Before doing this, it's best to check everything is working locally, as described above in the `Development` section. Make sure it builds, can be opened in your browser, and you don't see any console errors in the terminal or in your browser's dev tools.
 
 1. Ensure you have pushed a commit to your repository. This makes Github recognize that the repo has a branch.
 2. Go to your repository and click the `Settings` tab next to `Insights`.

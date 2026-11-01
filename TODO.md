@@ -9,8 +9,10 @@
 - [x] Interests tab
 - [x] Contact tab
 - [ ] Fill out my details
-- [ ] Use appropriate AM components wherever details aren't displayed well enough
+- [x] Use appropriate AM components wherever details aren't displayed well enough
+- [?] Add touch (swipe) event tracking for mobile experience
+- [ ] Add pointer events for mouse and stylus??
 - [ ] Linkify the paragraphs?
-- [ ] Add instructions in the README for adding pictures
+- [x] Add instructions in the README for adding pictures
 - [ ] Add better fonts to the theme?
 - [ ] Link and QR code?

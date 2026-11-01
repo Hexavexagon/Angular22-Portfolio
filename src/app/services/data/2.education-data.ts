@@ -1,63 +1,121 @@
+import { List } from "../../types/angular-types";
 import { ListData } from "../../types/tab-types";
 
-const type = 'list';
 const heading = 'History of Education';
 const description = 'I have a Bachelor of Engineering with Honours, with Second Class Honours in Software Engineering from Victoria University of Wellington.';
-const lists = [
+const lists: List[] = [
   {
-    title: '2014',
-    lines: [
-      'CMPO 381 - Interface Design For Live Electronics: C+',
-      'ECEN 201 - Data Acquisition: C',
-      'MDDN 251 - Physical Computing: B',
-      'SWEN 432 - Advanced Database Design And Implementation: B-',
+    heading: '2014',
+    listItems: [
+      {
+        itemTitle: 'COMP 381 - Interface Design For Live Electronics: C+',
+      },
+      {
+        itemTitle: 'ECEN 201 - Data Acquisition: C',
+      },
+      {
+        itemTitle: 'MDDN 251 - Physical Computing: B',
+      },
+      {
+        itemTitle: 'SWEN 432 - Advanced Database Design And Implementation: B-',
+      },
     ],
   },
   {
-    title: '2013',
-    lines: [
-      'ENGR 401 - Professional Practice: B+',
-      'ENGR 489 - Engineering Project: C+',
-      'SWEN 422 - Human Computer Interaction: B',
-      'SWEN 423 - Object Oriented Paradigms: A+',
-      'SWEN 430 - Compiler Engineering: C+',
-      'SWEN 433 - Web Information Systems Engineering: C+',
+    heading: '2013',
+    listItems: [
+      {
+        itemTitle: 'ENGR 401 - Professional Practice: B+',
+      },
+      {
+        itemTitle: 'ENGR 489 - Engineering Project: C+',
+      },
+      {
+        itemTitle: 'SWEN 422 - Human Computer Interaction: B',
+      },
+      {
+        itemTitle: 'SWEN 423 - Object Oriented Paradigms: A+',
+      },
+      {
+        itemTitle: 'SWEN 430 - Compiler Engineering: C+',
+      },
+      {
+        itemTitle: 'SWEN 433 - Web Information Systems Engineering: C+',
+      },
     ],
   },
   {
-    title: '2012',
-    lines: [
-      'COMP 304 - Programming Languages: B',
-      'COMP 307 - Introduction to Artificial Intelligence: C+',
-      'ENGR 301 - Project Management: A-',
-      'ENGR 302 - Group Project: B+',
-      'SWEN 301 - Structured Methods: C+',
-      'SWEN 302 - Agile Methods: B',
-      'SWEN 303 - User Interface Design: B',
+    heading: '2012',
+    listItems: [
+      {
+        itemTitle: 'COMP 304 - Programming Languages: B',
+      },
+      {
+        itemTitle: 'COMP 307 - Introduction to Artificial Intelligence: C+',
+      },
+      {
+        itemTitle: 'ENGR 301 - Project Management: A-',
+      },
+      {
+        itemTitle: 'ENGR 302 - Group Project: B+',
+      },
+      {
+        itemTitle: 'SWEN 301 - Structured Methods: C+',
+      },
+      {
+        itemTitle: 'SWEN 302 - Agile Methods: B',
+      },
+      {
+        itemTitle: 'SWEN 303 - User Interface Design: B',
+      },
     ],
   },
   {
-    title: '2011',
-    lines: [
-      'NWEN 241 - Systems Programming: B',
-      'NWEN 242 - Computer Organisation: A-',
-      'SWEN 221 - Software Development: B-',
-      'SWEN 222 - Software Design: C+',
-      'SWEN 223 - Software Engineering Analysis: B',
-      'SWEN 224 - Formal Foundations of Programming: B',
+    heading: '2011',
+    listItems: [
+      {
+        itemTitle: 'NWEN 241 - Systems Programming: B',
+      },
+      {
+        itemTitle: 'NWEN 242 - Computer Organisations: A-',
+      },
+      {
+        itemTitle: 'SWEN 221 - Software Development: B-',
+      },
+      {
+        itemTitle: 'SWEN 222 - Software Design: C+',
+      },
+      {
+        itemTitle: 'SWEN 223 - Software Engineering Analysis: B',
+      },
+      {
+        itemTitle: 'SWEN 224 - Formal Foundations of Programming: B',
+      },
     ],
   },
   {
-    title: '2010',
-    lines: [
-      'COMP 102 - Introduction to Computer Program Design: A',
-      'COMP 103 - Introduction to Data Structures and Algorithms: B+',
-      'ENGR 101 - Engineering Technology: A+',
-      'MATH 132 - Introduction to Mathematical Thinking: A',
-      'STAT 192 - Statistics for Natural and Social Sciences: B-',
-      'SWEN 102 - Introduction to Software Modelling: A',
+    heading: '2010',
+    listItems: [
+      {
+        itemTitle: 'COMP 102 - Introduction to Computer Program Design: A',
+      },
+      {
+        itemTitle: 'COMP 103 - Introduction to Data Structures and Algorithms: B+',
+      },
+      {
+        itemTitle: 'ENGR 101 - Engineering Technology: A+',
+      },
+      {
+        itemTitle: 'MATH 132 - Introducation to Mathematical Thinking: A',
+      },
+      {
+        itemTitle: 'STAT 192 - Statistics for Natural and Social Sciences: B-',
+      },
+      {
+        itemTitle: 'SWEN 102 - Introduction to Software Modelling: A',
+      },
     ],
   },
 ];
 
-export const educationData: ListData = { type, heading, description, lists };
+export const educationData: ListData = { type: 'list', heading, description, lists };
