@@ -1,6 +1,7 @@
 import { ParagraphData } from "../../types/tab-types";
 
-const heading = 'This will be the tab heading, and the title on the page';
+const tabHeading = 'This will be the tab heading';
+const pageTitle = 'This will be title on the page';
 const paragraphs = [
   'And you can just throw as many paragraphs in here as you want.',
   "Don't forget to swap between quotes/double quotes if you need to use apostraphes or speed marks.",
@@ -10,4 +11,4 @@ const paragraphs = [
 ];
 
 // Remember to rename 'paragraphTemplate', as this name is what we'll use to import it into data-service.ts
-export const paragraphTemplate: ParagraphData = { type: 'paragraph', heading, description: null, paragraphs };
+export const paragraphTemplate: ParagraphData = { type: 'paragraph', tabHeading, pageTitle, description: null, paragraphs };

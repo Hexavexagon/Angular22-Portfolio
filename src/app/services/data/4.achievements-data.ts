@@ -1,6 +1,7 @@
 import { CardData } from "../../types/tab-types";
 
-const heading = 'Achievements';
+const tabHeading = 'Achievements';
+const pageTitle = 'Achievements';
 const description = null;
 const cards = [
   {
@@ -37,4 +38,4 @@ const cards = [
   },
 ];
 
-export const achievementsData: CardData = { type: 'card', heading, description, cards };
+export const achievementsData: CardData = { type: 'card', tabHeading, pageTitle, description, cards };

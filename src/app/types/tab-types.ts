@@ -2,7 +2,8 @@ import { Card, List } from "./angular-types"
 
 interface TabData {
   type: 'card' | 'list' | 'paragraph',
-  heading: string,
+  tabHeading: string,
+  pageTitle: string,
   description: string | null,
 }
 

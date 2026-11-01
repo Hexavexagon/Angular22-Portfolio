@@ -1,6 +1,7 @@
 import { CardData } from "../../types/tab-types";
 
-const heading = 'This will be the tab heading, and the title on the page';
+const tabHeading = 'This will be the tab heading';
+const pageTitle = 'This will be the title on the page';
 const description = 'This is a paragraph that will appear before the lists.';
 const cards = [
   {
@@ -25,4 +26,4 @@ const cards = [
 ];
 
 // Remember to rename 'cardTemplate', as this name is what we'll use to import it into data-service.ts
-export const cardTemplate: CardData = { type: 'card', heading, description, cards };
+export const cardTemplate: CardData = { type: 'card', tabHeading, pageTitle, description, cards };

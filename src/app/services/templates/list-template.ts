@@ -1,7 +1,8 @@
 import { List } from "../../types/angular-types";
 import { ListData } from "../../types/tab-types";
 
-const heading = 'This will be the tab heading, and the title on the page';
+const tabHeading = 'This will be the tab heading';
+const pageTitle = 'This will be the title on the page';
 const description = 'This is a paragraph that will appear before the lists.';
 const lists: List[] = [
   {
@@ -39,4 +40,4 @@ const lists: List[] = [
 ];
 
 // Remember to rename 'listTemplate', as this name is what we'll use to import it into data-service.ts
-export const listTemplate: ListData = { type: 'list', heading, description, lists };
+export const listTemplate: ListData = { type: 'list', tabHeading, pageTitle, description, lists };

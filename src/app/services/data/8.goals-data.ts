@@ -1,6 +1,7 @@
 import { ParagraphData } from "../../types/tab-types";
 
-const heading = 'Goals';
+const tabHeading = 'Goals';
+const pageTitle = 'Goals';
 const paragraphs = [
   'In terms of employment, I have a few things I am on the lookout for:',
   'I want a remote position, preferably with somewhat flexible hours, so I can cook for myself and handle chores easier.',
@@ -8,4 +9,4 @@ const paragraphs = [
   'I work in a Linux dev environment without the use of Ai and I am not inclined to change that.',
 ];
 
-export const goalsData: ParagraphData = { type: 'paragraph', heading, description: null, paragraphs };
+export const goalsData: ParagraphData = { type: 'paragraph', tabHeading, pageTitle, description: null, paragraphs };

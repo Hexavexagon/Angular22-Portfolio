@@ -1,6 +1,7 @@
 import { CardData } from "../../types/tab-types";
 
-const heading = 'Referees';
+const tabHeading = 'Referees';
+const pageTitle = 'Referees';
 const description = 'People who can vouch for my character after working with them for 20 years:';
 const cards = [
   {
@@ -11,4 +12,4 @@ const cards = [
   },
 ];
 
-export const refereesData: CardData = { type: 'card', heading, description, cards };
+export const refereesData: CardData = { type: 'card', tabHeading, pageTitle, description, cards };

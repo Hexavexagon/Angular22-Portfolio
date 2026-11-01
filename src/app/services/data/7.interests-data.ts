@@ -1,6 +1,7 @@
 import { ParagraphData } from "../../types/tab-types";
 
-const heading = 'Interests';
+const tabHeading = 'Interests';
+const pageTitle = 'Interests';
 const paragraphs = [
   'Dancing',
   'TTRPG design',
@@ -9,4 +10,4 @@ const paragraphs = [
   'Poetry',
 ];
 
-export const interestsData: ParagraphData = { type: 'paragraph', heading, description: null, paragraphs };
+export const interestsData: ParagraphData = { type: 'paragraph', tabHeading, pageTitle, description: null, paragraphs };

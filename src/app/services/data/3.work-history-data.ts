@@ -1,6 +1,7 @@
 import { CardData } from "../../types/tab-types";
 
-const heading = 'History of Work';
+const tabHeading = 'History of Work';
+const pageTitle = 'History of Work';
 const description = null;
 const cards = [
   {
@@ -21,4 +22,4 @@ const cards = [
   },
 ]
 
-export const workHistoryData: CardData = { type: 'card', heading, description, cards };
+export const workHistoryData: CardData = { type: 'card', tabHeading, pageTitle, description, cards };
