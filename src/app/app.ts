@@ -68,12 +68,12 @@ export class App {
     const touchMoveX = $event.touches[0].clientX;
     if (this.activeTouchX) {
       if (this.activeTouchX - touchMoveX > 20) {
-        // Accept left swipes larger than 20px
-        this.onLeft();
-        this.unsetTouch();
-      } else if (touchMoveX - this.activeTouchX > 20) {
         // Accept right swipes larger than 20px
         this.onRight();
+        this.unsetTouch();
+      } else if (touchMoveX - this.activeTouchX > 20) {
+        // Accept left swipes larger than 20px
+        this.onLeft();
         this.unsetTouch();
       }
     }
