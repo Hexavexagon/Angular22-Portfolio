@@ -10,8 +10,8 @@
 - [x] Contact tab
 - [ ] Fill out my details
 - [x] Use appropriate AM components wherever details aren't displayed well enough
-- [?] Add touch (swipe) event tracking for mobile experience
-- [ ] Add pointer events for mouse and stylus??
+- [x] Add touch (swipe) event tracking for mobile experience
+- [x] Add pointer events for ~~mouse~~ and stylus??
 - [ ] Linkify the paragraphs?
 - [x] Add instructions in the README for adding pictures
 - [ ] Add better fonts to the theme?

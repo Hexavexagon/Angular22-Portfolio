@@ -25,12 +25,11 @@ import { DataService } from './services/data-service';
   styleUrl: './app.less',
   templateUrl: './app.html',
   host: {
-    '(body:keyup.ArrowRight)': 'onRight()',
-    '(body:keyup.ArrowLeft)': 'onLeft()',
-    '(body:touchstart)': 'onTouchStart($event)',
-    '(body:touchmove)': 'onTouchMove($event)',
-    '(body:touchend)': 'unsetTouch()',
-    '(body:touchcancel)': 'unsetTouch()',
+    '(body:keyup.ArrowRight)': 'changeTab("right")',
+    '(body:keyup.ArrowLeft)': 'changeTab("left")',
+    '(body:pointerdown)':'dragStart($event)',
+    '(body:pointermove)':'dragMove($event)',
+    '(body:pointerup)':'dragClear()',
   },
 })
 export class App {
@@ -39,47 +38,38 @@ export class App {
   public tabIndex = 0;
   private minTabindex = 0;
   private maxTabindex = this.dataService.tabs.length - 1;
-  private activeTouchX: number | undefined = undefined;
+  private activeX: number | undefined = undefined;
 
-  // Originally I wrote these as smarter functions, but they were much less human readible.
-  private onRight(): void {
-    if (this.tabIndex === this.maxTabindex) {
-      // Wrap around to start
-      this.tabIndex = 0;
-    } else {
-      this.tabIndex++;
-    }
-  }
-  private onLeft(): void {
-    if (this.tabIndex === this.minTabindex) {
-      // Wrap around to end
-      this.tabIndex = this.maxTabindex;
-    } else {
-      this.tabIndex--;
+  // Cursor key controls
+  private changeTab(direction: 'right' | 'left'): void {
+    switch (direction) {
+      case 'right':
+        this.tabIndex = (this.tabIndex === this.maxTabindex) ? 0 : this.tabIndex + 1;
+        this.dragClear();
+        break;
+      case 'left':
+        this.tabIndex = (this.tabIndex === this.minTabindex) ? this.maxTabindex : this.tabIndex - 1;
+        this.dragClear();
+        break;
     }
   }
 
-  // This part I hate, but I wanted swipe working on mobile
-  private onTouchStart($event: TouchEvent): void {
-    this.activeTouchX = $event.touches[0].clientX;
+  // Swipe and stylus controls
+  private dragStart($event: any): void {
+    if ($event.pointerType === 'mouse') { return; }
+    this.activeX = ($event.type === 'touchStart') ? $event.touches[0].clientX : $event.clientX;
   }
-
-  private onTouchMove($event: TouchEvent): void {
-    const touchMoveX = $event.touches[0].clientX;
-    if (this.activeTouchX) {
-      if (this.activeTouchX - touchMoveX > 20) {
-        // Accept right swipes larger than 20px
-        this.onRight();
-        this.unsetTouch();
-      } else if (touchMoveX - this.activeTouchX > 20) {
-        // Accept left swipes larger than 20px
-        this.onLeft();
-        this.unsetTouch();
-      }
+  private dragMove($event: any): void {
+    if ($event.pointerType === 'mouse') { return; }
+    if (!this.activeX) { return }
+    const moveX = ($event.type === 'touchMove') ? $event.touches[0].clientX : $event.clientX;
+    if (this.activeX - moveX > 100) {
+      this.changeTab('right');
+    } else if (moveX - this.activeX > 100) {
+      this.changeTab('left');
     }
   }
-
-  private unsetTouch(): void {
-    this.activeTouchX = undefined;
+  private dragClear(): void {
+    this.activeX = undefined;
   }
 }
