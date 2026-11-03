@@ -1,6 +1,6 @@
 <mat-tab-group [(selectedIndex)]="tabIndex">
   @for (tab of dataService.tabs; track $index) {
-    <mat-tab [label]="tab.heading">
+    <mat-tab [label]="tab.tabHeading">
       <div class="tab-content">
         @if (tab.type === 'card') {
           <app-card-tab class="tab" [tab]="tab"></app-card-tab>
