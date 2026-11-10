@@ -1,5 +1,12 @@
 <h1>{{ tab.pageTitle }}</h1>
 
-@for (paragraph of tab.paragraphs; track $index) {
-  <p>{{ paragraph }}</p>
+@for (section of tab.sections; track $index) {
+  <section>
+    @if (section.heading) {
+      <h2>{{ section.heading }}</h2>
+    }
+    @for (paragraph of section.paragraphs; track $index) {
+      <p>{{ paragraph }}</p>
+    }
+  </section>
 }

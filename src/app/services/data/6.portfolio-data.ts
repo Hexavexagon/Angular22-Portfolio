@@ -5,8 +5,18 @@ const pageTitle = 'Portfolio';
 const description = 'Here are some projects I have worked on over the years.';
 const cards = [
   {
+    title: 'KiwiRPG',
+    subtitle: '',
+    avatar: 'kiwirpg.png',
+    paragraphs: [
+      'I am currently (November 2026) serving as a committee member for Kemu Whakatau o Aotearoa (KiwiRPG). It is a community I feel rather passionately about so I decided to pitch in to do more work, and this is the first step in that process. For the most part I attend monthly meetings and do largely self-directed tasks, but being the committee member with the most tech experience I am also saddled with anything related to maintaining our website. I often feel ill-prepared for this, knowning roughly nothing about WordPress or our hosting platform, but nonetheless have averted any disasters thus far.',
+      'Some things I have achieved in my time as a committee member include upgrading our PHP version, investigating the recent PHP vulnerability, switching our backup service, hosting a panel on playtesting, initiating a member-wide survey, auditing our comms channels, and documenting the work roles we have in the organization as well as handover processes for them.',
+    ],
+  },
+  {
     title: 'iQualify',
     subtitle: 'October 2015 - November 2026',
+    avatar: 'iq.png',
     imageSrc: '',
     paragraphs: [
       'I have been a full stack developer for the iQualify web-based service for roughly ten years. In that time it evolved from AngularJS through to an almost recent version of Angular (version upgrades was the last thing I was working on).',
@@ -18,7 +28,7 @@ const cards = [
   {
     title: 'Strings',
     subtitle: 'Febuary 2024',
-    imageSrc: '',
+    imageSrc: 'stillfleet.png',
     paragraphs: [
       'I contributed to a private project that uses Ruby and Jekyll to construct a complex character generator tool for a sci-fi tabletop roleplaying game. It has since been taken down because of hosting costs, but a new version has been deployed instead. I have not contributed code to the new version, but contributed almost all the content in the warmachine generator.',
       'The new version can be found here: https://strings.stillfleet.com/stillfleet/warmachine',

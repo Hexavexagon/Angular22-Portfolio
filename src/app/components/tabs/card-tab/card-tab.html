@@ -1,19 +1,21 @@
 <h1>{{ tab.pageTitle }}</h1>
 
 @for (card of tab.cards; track $index) {
-  <mat-card class="app-card">
-    <mat-card-header>
-      <img mat-card-avatar [src]="card.avatar" role="presentation" alt=""/>
-      <mat-card-title>{{ card.title }}</mat-card-title>
-      <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
-    </mat-card-header>
-    @if (card.imageSrc) {
-      <img mat-card-image [src]="card.imageSrc" role="presentation" alt=""/>
-    }
-    <mat-card-content>
-      @for (paragraph of card.paragraphs; track $index) {
-        <p>{{ paragraph }}</p>
+  <section>
+    <mat-card>
+      <mat-card-header>
+        <img mat-card-avatar [src]="card.avatar" role="presentation" alt=""/>
+        <mat-card-title>{{ card.title }}</mat-card-title>
+        <mat-card-subtitle>{{ card.subtitle }}</mat-card-subtitle>
+      </mat-card-header>
+      @if (card.imageSrc) {
+        <img mat-card-image [src]="card.imageSrc" role="presentation" alt=""/>
       }
-    </mat-card-content>
-  </mat-card>
+      <mat-card-content>
+        @for (paragraph of card.paragraphs; track $index) {
+          <p>{{ paragraph }}</p>
+        }
+      </mat-card-content>
+    </mat-card>
+  </section>
 }

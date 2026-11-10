@@ -19,5 +19,8 @@ export interface ListData extends TabData {
 
 export interface ParagraphData extends TabData {
   type: 'paragraph',
-  paragraphs: string[],
+  sections: {
+    heading?: string,
+    paragraphs: string[],
+  }[],
 }

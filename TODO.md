@@ -9,6 +9,7 @@
 - [x] Interests tab
 - [x] Contact tab
 - [ ] Fill out my details
+- [ ] Add images
 - [x] Use appropriate AM components wherever details aren't displayed well enough
 - [x] Add touch (swipe) event tracking for mobile experience
 - [x] Add pointer events for ~~mouse~~ and stylus??
