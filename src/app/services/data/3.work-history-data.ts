@@ -1,3 +1,4 @@
+// Types
 import { CardData } from "../../types/tab-types";
 
 const tabHeading = 'History of Work';

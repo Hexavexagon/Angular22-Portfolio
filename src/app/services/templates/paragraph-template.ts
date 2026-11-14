@@ -1,3 +1,4 @@
+// Types
 import { ParagraphData } from "../../types/tab-types";
 
 const tabHeading = 'This will be the tab heading';

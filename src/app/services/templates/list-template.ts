@@ -1,5 +1,5 @@
-import { List } from "../../types/angular-types";
-import { ListData } from "../../types/tab-types";
+// Types
+import { List, ListData } from "../../types/tab-types";
 
 const tabHeading = 'This will be the tab heading';
 const pageTitle = 'This will be the title on the page';

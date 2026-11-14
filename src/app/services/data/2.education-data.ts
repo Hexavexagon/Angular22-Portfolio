@@ -1,5 +1,5 @@
-import { List } from "../../types/angular-types";
-import { ListData } from "../../types/tab-types";
+// Types
+import { List, ListData } from "../../types/tab-types";
 
 const tabHeading = 'History of Education';
 const pageTitle = 'History of Education';

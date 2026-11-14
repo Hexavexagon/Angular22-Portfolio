@@ -15,6 +15,13 @@
         @for (paragraph of card.paragraphs; track $index) {
           <p>{{ paragraph }}</p>
         }
+      @if (card.competencies) {
+        <hr/>
+        <p>Competencies demonstrated:</p>
+        @for (competency of card.competencies; track $index) {
+          <mat-chip>{{ competency }}</mat-chip>
+        }
+      }
       </mat-card-content>
     </mat-card>
   </section>

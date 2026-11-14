@@ -8,9 +8,9 @@ import { CardData, ListData, ParagraphData } from '../types/tab-types';
 import { introductionData } from './data/1.introduction-data';
 import { educationData } from './data/2.education-data';
 import { workHistoryData } from './data/3.work-history-data';
-import { portfolioData } from './data/6.portfolio-data';
-import { goalsData } from './data/8.goals-data';
-import { contactData } from './data/9.contact-data';
+import { portfolioData } from './data/4.portfolio-data';
+import { goalsData } from './data/5.goals-data';
+import { contactData } from './data/6.contact-data';
 
 @Service()
 export class DataService {

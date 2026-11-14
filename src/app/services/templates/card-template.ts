@@ -1,3 +1,4 @@
+// Types
 import { CardData } from "../../types/tab-types";
 
 const tabHeading = 'This will be the tab heading';
@@ -14,6 +15,14 @@ const cards = [
       'The "avatar" property is for the source of an image to use as a small image beside the title and subtitle. It is optional.',
       'The "imageSrc" property is for a full sized image between the title and the text. It is also optional.',
       'Images can be placed in the /public folder.',
+    ],
+    competencies: [
+      'You',
+      'Can',
+      'Add',
+      'These',
+      'If',
+      'Desired',
     ],
   },
   {
